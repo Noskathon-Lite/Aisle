@@ -162,6 +162,11 @@ body {
     
 }
 
+
+.fa-solid.fa-location-dot {
+    font-size: 1.5em; /* Increases the size of the icon */
+}
+
 .btn_form {
     display: flex;
     justify-content: center; /* Horizontally space buttons */
