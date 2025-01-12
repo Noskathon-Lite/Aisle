@@ -199,6 +199,7 @@ body {
     background-color: #78d6de; /* Light background for the section */
 }
 
+
 .flex-container {
     display: flex;
     gap: 30px; /* Increased gap between flex boxes */
@@ -251,9 +252,6 @@ body {
 
 
 /* Page 3 */
-
-/* Page 3 Section */
-
 .page3-section {
     display: flex;
     justify-content: space-between;

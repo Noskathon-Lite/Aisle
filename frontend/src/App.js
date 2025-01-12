@@ -91,6 +91,86 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="page2">
+        <div className="flex-container">
+          <div className="flex-box">
+            <h3>Roadway Infrastructure</h3>
+            <p>Modern roads with high-quality surfaces enhance the driving experience. Features include smart traffic signals and well-marked lanes for efficient navigation.</p>
+          </div>
+          <div className="flex-box">
+            <h3>Environment Benefits</h3>
+            <p>Efficient roadways reduce congestion and emissions, promoting cleaner air. Strategic tree plantations along roads mitigate the environmental impact of urban traffic.</p>
+          </div>
+          <div className="flex-box">
+            <h3>Fastest Route Assistance</h3>
+            <p>Advanced GPS technology provides real-time updates, ensuring drivers reach their destinations via the fastest and most efficient routes.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="page3-section">
+      <div className="page3-content">
+        <h2>Route Optimization for Your Convenience</h2>
+        <p>Our advanced route optimization technology ensures that you get the most efficient paths for your journeys. Save time, reduce fuel consumption, and avoid unnecessary delays.</p>
+        <p>With real-time data, we help you navigate through the best possible routes whether you're commuting daily or planning a longer trip.</p>
+      </div>
+      <div className="page3-image">
+        <img src="/page3.jpg" alt="Route Optimization Image" className="page3-img" />
+      </div>
+    </section>    
+
+    <section className="footer">
+      <div className="footer-row">
+        <div className="footer-col">
+          <h4>About RoadWay</h4>
+          <ul className="links">
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Customer Success</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Partners</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Explore Route Optimization</h4>
+          <ul className="links">
+            <li><a href="#">Route Planning</a></li>
+            <li><a href="#">Traffic Alerts</a></li>
+            <li><a href="#">Best Routes</a></li>
+            <li><a href="#">Real-time Navigation</a></li>
+            <li><a href="#">Fleet Management</a></li>
+            <li><a href="#">User Reviews</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Legal & Privacy</h4>
+          <ul className="links">
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR Compliance</a></li>
+            <li><a href="#">Data Security</a></li>
+            <li><a href="#">Customer Testimonials</a></li>
+            <li><a href="#">Press Kit</a></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Stay Updated</h4>
+          <p>Stay ahead with new features and enhancements to make your daily commute or long-distance trips smarter and faster.</p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div className="icons">
+            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
     </div>
   );
 }
