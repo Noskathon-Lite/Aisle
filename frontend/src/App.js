@@ -4,6 +4,8 @@ import logo from './logo.png';
 import './style.css';
 import Page2 from './Components/page2';
 import Page3 from './Components/page3';
+import Page1 from './Components/page1';
+import Footer from './Components/footer';
 
 function App() {
   const mapRef = useRef(null);
@@ -72,82 +74,11 @@ function App() {
         </div>
       </header>
 
-      <section className="page1">
-        <div id="map"></div>
-        <div className="container">
-          <div className="form">
-            <h2>Route Optimization</h2>
-            <form id="routeForm" onSubmit={e => e.preventDefault()}>
-              <div>
-                Source Point <br /><i className="fa-solid fa-house"></i>
-                <input type="text" id="start" placeholder="Address of starting point" /><br />
-              </div>
-              <div>
-                Destination Point<br /><i className="fa-solid fa-location-dot"></i>
-                <input type="text" id="end" placeholder="Address of end point" /><br />
-              </div>
-              <div className="btn_form">
-                <button className="one" type="button" onClick={calculateRoute}>Optimize</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
 
+<Page1></Page1>
 <Page2></Page2>
 <Page3></Page3>
-    
-
-    <section className="footer">
-      <div className="footer-row">
-        <div className="footer-col">
-          <h4>About RoadWay</h4>
-          <ul className="links">
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Customer Success</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Partners</a></li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h4>Explore Route Optimization</h4>
-          <ul className="links">
-            <li><a href="#">Route Planning</a></li>
-            <li><a href="#">Traffic Alerts</a></li>
-            <li><a href="#">Best Routes</a></li>
-            <li><a href="#">Real-time Navigation</a></li>
-            <li><a href="#">Fleet Management</a></li>
-            <li><a href="#">User Reviews</a></li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h4>Legal & Privacy</h4>
-          <ul className="links">
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">GDPR Compliance</a></li>
-            <li><a href="#">Data Security</a></li>
-            <li><a href="#">Customer Testimonials</a></li>
-            <li><a href="#">Press Kit</a></li>
-          </ul>
-        </div>
-        <div className="footer-col">
-          <h4>Stay Updated</h4>
-          <p>Stay ahead with new features and enhancements to make your daily commute or long-distance trips smarter and faster.</p>
-          <form action="#">
-            <input type="text" placeholder="Your email" required />
-            <button type="submit">SUBSCRIBE</button>
-          </form>
-          <div className="icons">
-            <i className="fa-brands fa-facebook-f"></i>
-            <i className="fa-brands fa-twitter"></i>
-            <i className="fa-brands fa-linkedin"></i>
-            <i className="fa-brands fa-github"></i>
-          </div>
-        </div>
-      </div>
-    </section>
+<Footer></Footer>  
 
     </div>
   );
