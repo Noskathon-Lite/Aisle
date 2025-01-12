@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import logo from './logo.png';
 import './style.css';
+import Page2 from './Components/page2';
+import Page3 from './Components/page3';
 
 function App() {
   const mapRef = useRef(null);
@@ -92,33 +94,9 @@ function App() {
         </div>
       </section>
 
-      <section className="page2">
-        <div className="flex-container">
-          <div className="flex-box">
-            <h3>Roadway Infrastructure</h3>
-            <p>Modern roads with high-quality surfaces enhance the driving experience. Features include smart traffic signals and well-marked lanes for efficient navigation.</p>
-          </div>
-          <div className="flex-box">
-            <h3>Environment Benefits</h3>
-            <p>Efficient roadways reduce congestion and emissions, promoting cleaner air. Strategic tree plantations along roads mitigate the environmental impact of urban traffic.</p>
-          </div>
-          <div className="flex-box">
-            <h3>Fastest Route Assistance</h3>
-            <p>Advanced GPS technology provides real-time updates, ensuring drivers reach their destinations via the fastest and most efficient routes.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="page3-section">
-      <div className="page3-content">
-        <h2>Route Optimization for Your Convenience</h2>
-        <p>Our advanced route optimization technology ensures that you get the most efficient paths for your journeys. Save time, reduce fuel consumption, and avoid unnecessary delays.</p>
-        <p>With real-time data, we help you navigate through the best possible routes whether you're commuting daily or planning a longer trip.</p>
-      </div>
-      <div className="page3-image">
-        <img src="/page3.jpg" alt="Route Optimization Image" className="page3-img" />
-      </div>
-    </section>    
+<Page2></Page2>
+<Page3></Page3>
+    
 
     <section className="footer">
       <div className="footer-row">

@@ -193,30 +193,35 @@ body {
 }
 
 /* Flex Container */
-
+/* Page 2 */
 .page2 {
     padding: 40px 10%;
+    z-index: 1;
     background-color: #78d6de; /* Light background for the section */
+    box-sizing: border-box;
+    margin-top: 720px;
+    margin-bottom: 40px; /* Add space below the section to prevent overlap */
 }
 
-
+/* Flex Container */
 .flex-container {
-    display: flex;
+    display: flex; /* Use flexbox for layout */
     gap: 30px; /* Increased gap between flex boxes */
     flex-wrap: wrap;
     justify-content: center;
-    padding: 40px 20px; /* Increased padding to add more space */
+    padding: 40px 20px;
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box; /* To prevent content overflow */
+    box-sizing: border-box;
+    position: relative; /* Ensure it doesn't overlap other sections */
 }
 
 /* Flex Box Styles */
 .flex-box {
     flex: 1 1 calc(33.333% - 30px); /* Three columns with larger gaps */
     background-color: #ffffff;
-    padding: 30px; /* Increased padding for content */
+    padding: 30px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -232,17 +237,16 @@ body {
 
 .flex-box h3 {
     color: #03abc1;
-    margin-bottom: 15px; /* More space below the heading */
-    font-size: 20px; /* Slightly larger heading */
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .flex-box p {
     color: #555;
-    font-size: 16px; /* Slightly larger font size for better readability */
+    font-size: 16px;
     line-height: 1.6;
 }
-
-/* Responsive Design */
+/* Responsive Design for Page 2 */
 @media (max-width: 768px) {
     .flex-box {
         flex: 1 1 100%; /* Full width on smaller screens */
@@ -257,16 +261,17 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px 10%;
-    background-color: #f0f0f0; /* Light background for the section */
-    margin-top: 30px;
+    background-color: #f0f0f0;
+    margin-top: 30px; /* Adjusted margin for spacing between sections */
+    margin-bottom: 40px; /* Add space below to prevent overlap */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for some depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .page3-content {
     flex: 1;
     padding-right: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .page3-content h2 {
@@ -284,18 +289,18 @@ body {
 .page3-image {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Align the image to the right */
+    justify-content: flex-end;
 }
 
 .page3-img {
     width: 100%;
     height: auto;
-    max-width: 500px; /* Limit the image width for better proportion */
+    max-width: 500px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Styling */
+/* Responsive Styling for Page 3 */
 @media (max-width: 768px) {
     .page3-section {
         flex-direction: column;
