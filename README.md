@@ -25,7 +25,7 @@ Road-Way is a route optimization application developed by Team Aisle to efficien
 3. **Setup Virtual Environment**
    ```bash
    python -m venv env
-   source env/bin/activate  # For Windows users, use `env\Scripts\activate`  
+   source env/bin/activate   
 
 4. **Install Dependencies**
    ```bash
