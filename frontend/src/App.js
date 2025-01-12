@@ -4,7 +4,7 @@ import logo from './logo.png';
 import './style.css';
 import Page2 from './Components/page2';
 import Page3 from './Components/page3';
-import Page1 from './Components/page1';
+import 'leaflet/dist/leaflet.css';
 import Footer from './Components/footer';
 
 function App() {
@@ -74,8 +74,28 @@ function App() {
         </div>
       </header>
 
+      <section className="page1">
+        <div id="map"></div>
+        <div className="container">
+          <div className="form">
+            <h2>Route Optimization</h2>
+            <form id="routeForm" onSubmit={e => e.preventDefault()}>
+              <div>
+                Source Point <br /><i className="fa-solid fa-house"></i>
+                <input type="text" id="start" placeholder="Address of starting point" /><br />
+              </div>
+              <div>
+                Destination Point<br /><i className="fa-solid fa-location-dot"></i>
+                <input type="text" id="end" placeholder="Address of end point" /><br />
+              </div>
+              <div className="btn_form">
+                <button className="one" type="button" onClick={calculateRoute}>Optimize</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
 
-<Page1></Page1>
 <Page2></Page2>
 <Page3></Page3>
 <Footer></Footer>  
