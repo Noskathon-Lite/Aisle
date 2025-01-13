@@ -6,6 +6,26 @@ import Page2 from './Components/page2';
 import Page3 from './Components/page3';
 import 'leaflet/dist/leaflet.css';
 import Footer from './Components/footer';
+import 'font-awesome/css/font-awesome.min.css';
+
+// Import Leaflet default marker icons
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+
+// Configure Leaflet default marker icon
+const DefaultIcon = L.icon({
+  iconUrl: markerIcon,
+  iconRetinaUrl: markerIcon2x,
+  shadowUrl: markerShadow,
+  iconSize: [25, 41], // Default size
+  iconAnchor: [12, 41], // Anchor for the bottom of the icon
+  popupAnchor: [1, -34], // Popup anchor point
+  tooltipAnchor: [16, -28], // Tooltip anchor point
+  shadowSize: [41, 41], // Shadow size
+});
+
+L.Marker.prototype.options.icon = DefaultIcon;
 
 function App() {
   const mapRef = useRef(null);
@@ -17,7 +37,7 @@ function App() {
 
       const mapInstance = L.map('map').setView(nepalCenter, zoomLevel);
 
-      // Add OpenStreetMap tile layer
+      // Add OpenStreetMap 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(mapInstance);
@@ -44,9 +64,17 @@ function App() {
           .then(endData => {
             const endCoords = endData[0];
 
-            if (mapRef.current) {  // Ensure map is defined
-              L.marker([startCoords.lat, startCoords.lon]).addTo(mapRef.current).bindPopup("Start Point").openPopup();
-              L.marker([endCoords.lat, endCoords.lon]).addTo(mapRef.current).bindPopup("End Point").openPopup();
+            if (mapRef.current) {
+              // Add markers for start and end points
+              L.marker([startCoords.lat, startCoords.lon])
+                .addTo(mapRef.current)
+                .bindPopup('Start Point')
+                .openPopup();
+
+              L.marker([endCoords.lat, endCoords.lon])
+                .addTo(mapRef.current)
+                .bindPopup('End Point')
+                .openPopup();
 
               console.log('Start:', startCoords);
               console.log('End:', endCoords);
@@ -96,10 +124,9 @@ function App() {
         </div>
       </section>
 
-<Page2></Page2>
-<Page3></Page3>
-<Footer></Footer>  
-
+      <Page2 />
+      <Page3 />
+      <Footer />
     </div>
   );
 }
