@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    background-color: #a8d5ed;
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
+}
+
+/* Nav bar css starts */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #2c3e50;
+    
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+}
+
+li a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #03abc1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+li a:hover {
+    color: #03222c;
+}
+
+button {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    
+}
+
+button:hover {
+    background-color: #008c9e;
+}
+.logo{
+    cursor: pointer;
+}
+.nav_links{
+    list-style: none;
+    
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.butn{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+.logo{
+    width: 50px;
+    border-radius: 15px;
+}
+/* nav bar css ends */
+
+/* Form starts */
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
+}
+
+#map {
+    position: absolute;
+    top: 12;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure map is behind other elements */
+}
+.container {
+    position: absolute; /* Keeps it fixed on the screen */
+    top: 25%; /* Adjust to desired position */
+    left: 4%;
+    background-color: #03222c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Ensure it's above the map */
+    width: 350px;
+    color: white;
+    max-height: 80vh; /* Optional: control the height */
+    overflow-y: auto; /* Optional: make the form scrollable if needed */
+}
+
+
+.form {
+    background-color: #111620; /* Dark background for contrast */
+    padding: 25px;
+    border-radius: 10px;
+    color: white; /* White text for readability */
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.form input[type="text"] {
+    width: calc(100% - 40px); /* Adjust width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #CCC; /* Light border */
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 3px;
+}
+
+.form i {
+    margin-right: 10px;
+    
+}
+
+
+.fa-solid.fa-location-dot {
+    font-size: 1.5em; /* Increases the size of the icon */
+}
+
+.btn_form {
+    display: flex;
+    justify-content: center; /* Horizontally space buttons */
+    gap: 10px; /* Small gap between buttons */
+    margin-top: 20px;
+    box-sizing: border-box;
+
+}
+
+.form button.one {
+    background-color: #00bcd4; /* Primary button color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+}
+
+.form button.one:hover {
+    background-color:#03222c; /* Light grey background */
+    
+}
+
+/* Flex Container */
+/* Page 2 */
+.page2 {
+    padding: 40px 10%;
+    z-index: 1;
+    background-color: #78d6de; /* Light background for the section */
+    box-sizing: border-box;
+    margin-top: 720px;
+    margin-bottom: 40px; /* Add space below the section to prevent overlap */
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex; /* Use flexbox for layout */
+    gap: 30px; /* Increased gap between flex boxes */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px 20px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative; /* Ensure it doesn't overlap other sections */
+}
+
+/* Flex Box Styles */
+.flex-box {
+    flex: 1 1 calc(33.333% - 30px); /* Three columns with larger gaps */
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Flex Box Hover Effect */
+.flex-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.flex-box h3 {
+    color: #03abc1;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.flex-box p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Responsive Design for Page 2 */
+@media (max-width: 768px) {
+    .flex-box {
+        flex: 1 1 100%; /* Full width on smaller screens */
+        padding: 20px; /* Reduced padding for small screens */
+    }
+}
+
+
+/* Page 3 */
+.page3-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    background-color: #f0f0f0;
+    margin-top: 30px; /* Adjusted margin for spacing between sections */
+    margin-bottom: 40px; /* Add space below to prevent overlap */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page3-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.page3-content h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.page3-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.page3-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page3-img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling for Page 3 */
+@media (max-width: 768px) {
+    .page3-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .page3-content {
+        padding-right: 0;
+    }
+
+    .page3-img {
+        width: 90%;
+        margin-top: 20px;
+    }
+}
+
+
+/* General Footer Styling */
+/* Footer Styling */
+/* Footer Styling */
+.footer {
+    background-color: #2c3e50; /* Dark background */
+    color: #edf0f1; /* Light text */
+    padding: 50px 10%; /* Add padding around the footer */
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    gap: 20px; /* Add space between columns */
+}
+
+.footer-col {
+    flex: 1 1 200px; /* Flexible width with a minimum size */
+    min-width: 200px; /* Prevent columns from shrinking too small */
+}
+
+.footer-col h4 {
+    margin-bottom: 20px; /* Add spacing below headings */
+    font-size: 18px;
+    color: #03abc1; /* Highlight the heading */
+}
+
+.footer-col ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    flex-direction: column; /* Ensure list items are stacked vertically */
+    gap: 10px; /* Add spacing between list items */
+}
+
+.footer-col ul li {
+    font-size: 16px;
+}
+
+.footer-col ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #edf0f1; /* Light text color */
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #03abc1; /* Highlight on hover */
+}
+
+.footer-col form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 10px; /* Add spacing between form elements */
+}
+
+.footer-col input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.footer-col button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #03abc1;
+    color: #edf0f1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-col button:hover {
+    background-color: #028b9c;
+}
+
+.footer-col .icons {
+    display: flex;
+    gap: 10px; /* Add spacing between icons */
+    margin-top: 20px;
+}
+
+.footer-col .icons i {
+    font-size: 18px;
+    color: #edf0f1;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-col .icons i:hover {
+    color: #03abc1; /* Highlight icon on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .footer-row {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .footer-col {
+        text-align: center; /* Center-align content for smaller screens */
+    }
+}
+
