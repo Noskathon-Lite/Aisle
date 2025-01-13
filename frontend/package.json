@@ -7,6 +7,7 @@
     "cra-template": "1.2.0",
     "font-awesome": "^4.7.0",
     "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",

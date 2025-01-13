@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
+import 'leaflet-routing-machine';  // Importing leaflet-routing-machine here
 import logo from './logo.png';
 import './style.css';
 import Page2 from './Components/page2';
@@ -29,6 +30,7 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 function App() {
   const mapRef = useRef(null);
+  const [routeControl, setRouteControl] = useState(null);  // State to hold the route control instance
 
   useEffect(() => {
     if (!mapRef.current) {
@@ -37,7 +39,7 @@ function App() {
 
       const mapInstance = L.map('map').setView(nepalCenter, zoomLevel);
 
-      // Add OpenStreetMap 
+      // Add OpenStreetMap tile layer
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(mapInstance);
@@ -55,29 +57,35 @@ function App() {
       return;
     }
 
+    // Clear existing route if any
+    if (routeControl) {
+      routeControl.setWaypoints([]);
+    }
+
     fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${start}`)
       .then(response => response.json())
       .then(startData => {
         const startCoords = startData[0];
+
         fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${end}`)
           .then(response => response.json())
           .then(endData => {
             const endCoords = endData[0];
 
             if (mapRef.current) {
-              // Add markers for start and end points
-              L.marker([startCoords.lat, startCoords.lon])
-                .addTo(mapRef.current)
-                .bindPopup('Start Point')
-                .openPopup();
+              L.marker([startCoords.lat, startCoords.lon]).addTo(mapRef.current).bindPopup("Start Point").openPopup();
+              L.marker([endCoords.lat, endCoords.lon]).addTo(mapRef.current).bindPopup("End Point").openPopup();
 
-              L.marker([endCoords.lat, endCoords.lon])
-                .addTo(mapRef.current)
-                .bindPopup('End Point')
-                .openPopup();
+              // Create a route control for routing between start and end
+              const newRouteControl = L.Routing.control({
+                waypoints: [
+                  L.latLng(startCoords.lat, startCoords.lon),
+                  L.latLng(endCoords.lat, endCoords.lon)
+                ],
+                routeWhileDragging: true, // Optional: allows you to drag the route while editing
+              }).addTo(mapRef.current);
 
-              console.log('Start:', startCoords);
-              console.log('End:', endCoords);
+              setRouteControl(newRouteControl);  // Update routeControl state
             }
           });
       });
