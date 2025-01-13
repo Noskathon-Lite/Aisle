@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
-import 'leaflet-routing-machine';  // Importing leaflet-routing-machine here
+import 'leaflet-routing-machine'; // Importing leaflet-routing-machine
 import logo from './logo.png';
 import './style.css';
 import Page2 from './Components/page2';
